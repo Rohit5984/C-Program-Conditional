@@ -1,0 +1,60 @@
+#include <stdio.h>
+
+// Function declaration
+int reverseNumber(int n);
+
+int main() {
+    int num, rev;               // on top u let int n here in this line also u can write it as n instead of num
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    // Function call
+    rev = reverseNumber(num);
+
+    printf("Reversed number = %d\n", rev);
+
+    return 0;
+}
+
+// Function definition
+int reverseNumber(int n) 
+{
+    int rev = 0, rem;
+    while (n != 0) {
+        rem = n % 10;          // Get last digit
+        rev = rev * 10 + rem;  // Build reversed number
+        n = n / 10;            // Remove last digit
+    }
+    return rev;  // Return reversed number to main
+}
+                                              OR
+#include <stdio.h>
+
+// Function declaration
+int reverseNumber(int n);
+
+int main() {
+    int n, rev;               
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
+    // Function call
+    rev = reverseNumber(n);
+
+    printf("Reversed number = %d\n", rev);
+
+    return 0;
+}
+
+// Function definition
+int reverseNumber(int n) 
+{
+    int rev = 0, rem;
+    while (n != 0) {
+        rem = n % 10;          // Get last digit
+        rev = rev * 10 + rem;  // Build reversed number
+        n = n / 10;            // Remove last digit
+    }
+    return rev;  // Return reversed number to main
+}
+
