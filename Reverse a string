@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include <string.h>
+
+// Function declaration
+void reverseString(char str[]);
+
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    scanf("%s", str);
+
+    reverseString(str);   // Function call
+    return 0;
+}
+
+// Function definition
+void reverseString(char str[]) {
+    int i, n, len;
+    char temp;
+    len = strlen(str);
+    n = len - 1;
+
+    for (i = 0; i < len / 2; i++) {
+        temp = str[i];
+        str[i] = str[n];
+        str[n] = temp;
+        n--;
+    }
+
+    printf("Reversed string = %s\n", str);
+}
