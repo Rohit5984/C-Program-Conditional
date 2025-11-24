@@ -1,16 +1,15 @@
-#include <cstdio>   // For printf, scanf
+#include <cstdio>   
 
-// Function declaration
 void findGreatestSmallest(int a, int b);
 
 int main() {
-    int num1, num2;     // U can also write as int a, b;
+    int a, b;     
 
     printf("Enter two numbers: ");
-    scanf("%d %d", &num1, &num2);   // Removed trailing space
+    scanf("%d %d", &a ,&b);   // Removed trailing space
 
     // Function call
-    findGreatestSmallest(num1, num2);
+    findGreatestSmallest(a, b);
 
     return 0;
 }
