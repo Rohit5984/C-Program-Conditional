@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+// Function declaration
+int isArmstrong(int n);
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    if (isArmstrong(num))   // Function call
+        printf("%d is Armstrong\n", num);
+    else
+        printf("%d is NOT Armstrong\n", num);
+
+    return 0;
+}
+
+// Function definition
+int isArmstrong(int n) {
+    int sum = 0, rem, original = n;
+    while (n != 0) {
+        rem = n % 10;
+        sum = sum + rem * rem * rem;   // cube for 3-digit Armstrong
+        n = n / 10;
+    }
+    return (sum == original);
+}
