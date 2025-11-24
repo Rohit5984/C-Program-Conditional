@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+// Function declaration
+void checkEvenOdd(int a);
+
+int main() {
+    int a;
+    printf("Enter any number: ");
+    scanf("%d", &a);
+
+    // Function call
+    checkEvenOdd(a);
+
+    return 0;
+}
+
+// Function definition
+void checkEvenOdd(int a) {
+    if (a % 2 == 0) {
+        printf("Even: %d\n", a);
+    } else {
+        printf("Odd: %d\n", a);
+    }
+}
