@@ -1,0 +1,33 @@
+#include <cstdio>   // For printf, scanf
+
+// Function declaration
+void findGreatestSmallest(int a, int b);
+
+int main() {
+    int num1, num2;     // U can also write as int a, b;
+
+    printf("Enter two numbers: ");
+    scanf("%d %d", &num1, &num2);   // Removed trailing space
+
+    // Function call
+    findGreatestSmallest(num1, num2);
+
+    return 0;
+}
+
+// Function definition
+void findGreatestSmallest(int a, int b) {
+    // Find greatest
+    if (a >= b) {
+        printf("Greatest number: %d\n", a);
+    } else {
+        printf("Greatest number: %d\n", b);
+    }
+
+    // Find smallest
+    if (a <= b) {
+        printf("Smallest number: %d\n", a);
+    } else {
+        printf("Smallest number: %d\n", b);
+    }
+}
