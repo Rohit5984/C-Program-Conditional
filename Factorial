@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+void findFactorial(int num);
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    findFactorial(num);
+    return 0;
+}
+
+void findFactorial(int num) {
+    long long fact = 1;   // safer for large factorials
+
+    for (int i = 1; i <= num; i++) {
+        fact *= i;
+    }
+
+    // Print in the format: 20! = value
+    printf("%d! = %lld\n", num, fact);
+}
