@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void productOfDigits(int num);
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    productOfDigits(num);
+    return 0;
+}
+
+void productOfDigits(int num) {
+    int product = 1, rem;
+    while (num != 0) {
+        rem = num % 10;
+        product *= rem;
+        num /= 10;
+    }
+    printf("Product of digits = %d\n", product);
+}
