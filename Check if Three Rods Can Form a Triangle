@@ -1,0 +1,25 @@
+//Rule: A triangle can be formed if sum of any two sides > third side.
+#include <stdio.h>
+
+void checkTriangleFormation(int a, int b, int c);
+
+int main() {
+    int a, b, c;
+    printf("Enter lengths of three rods: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    checkTriangleFormation(a, b, c);
+    return 0;
+}
+
+void checkTriangleFormation(int a, int b, int c) {
+    if (a + b > c && a + c > b && b + c > a)
+        printf("Triangle can be formed.\n");
+    else
+        printf("Triangle cannot be formed.\n");
+}
+
+/* Example Output =>
+   Enter lengths of three rods: 3 4 5
+   Triangle can be formed.
+*/
