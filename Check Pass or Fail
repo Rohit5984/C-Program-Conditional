@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+void checkPassFail(int marks);
+
+int main() {
+    int marks;
+    printf("Enter marks: ");
+    scanf("%d", &marks);
+
+    checkPassFail(marks);
+    return 0;
+}
+
+void checkPassFail(int marks) {
+    if (marks >= 45)
+        printf("Result: Pass\n");
+    else
+        printf("Result: Fail\n");
+}
+
+/* Example Output =>
+   Enter marks: 50
+   Result: Pass
+*/
