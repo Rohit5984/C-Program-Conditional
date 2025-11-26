@@ -1,0 +1,36 @@
+#include <stdio.h>
+#include <string.h>
+
+// Function declaration
+void checkPalindromeString(char str[]);
+
+int main() {
+    char greeting[200];
+    printf("Enter the string: ");
+    scanf("%s", greeting);
+
+    checkPalindromeString(greeting);   // Function call
+    return 0;
+}
+
+// Function definition
+void checkPalindromeString(char str[]) {
+    char reverse[200];
+    int len, n;
+
+    len = strlen(str);
+    n = len - 1;
+
+    // Reverse the string
+    for (int i = 0; i < len; i++) {
+        reverse[i] = str[n];
+        n--;
+    }
+    reverse[len] = '\0';   // ✅ Add null terminator
+
+    // Compare original and reversed
+    if (strcmp(str, reverse) == 0)
+        printf("%s is a Palindrome string.\n", str);
+    else
+        printf("%s is not a Palindrome string.\n", str);
+}
