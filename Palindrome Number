@@ -1,28 +1,32 @@
 #include <stdio.h>
 
 // Function declaration
-int isPalindrome(int n);
+void checkPalindromeNumber(int num);
 
 int main() {
     int num;
     printf("Enter a number: ");
     scanf("%d", &num);
 
-    if (isPalindrome(num))   // Function call
-        printf("%d is Palindrome\n", num);
-    else
-        printf("%d is NOT Palindrome\n", num);
-
+    checkPalindromeNumber(num);   // Function call
     return 0;
 }
 
 // Function definition
-int isPalindrome(int n) {
-    int rev = 0, rem, original = n;
-    while (n != 0) {
-        rem = n % 10;
-        rev = rev * 10 + rem;
-        n = n / 10;
+void checkPalindromeNumber(int num) {
+    int originalNum, remainder, reversed = 0;
+
+    originalNum = num;
+
+    // Reverse the number
+    while (num != 0) {
+        remainder = num % 10;
+        reversed = reversed * 10 + remainder;
+        num = num / 10;
     }
-    return (rev == original);
+
+    if (originalNum == reversed)
+        printf("%d is a Palindrome number.\n", originalNum);
+    else
+        printf("%d is not a Palindrome number.\n", originalNum);
 }
