@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+void sumOfEvenDigits(int num);
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    sumOfEvenDigits(num);
+    return 0;
+}
+
+void sumOfEvenDigits(int num) {
+    int sum = 0, rem;
+    while (num != 0) {
+        rem = num % 10;
+        if (rem % 2 == 0) sum += rem;
+        num /= 10;
+    }
+    printf("Sum of even digits = %d\n", sum);
+}
