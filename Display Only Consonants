@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <string.h>
+#include <ctype.h>
+
+void displayConsonants(char str[]);
+
+int main() {
+    char str[100];
+    printf("Enter a string: ");
+    fgets(str, sizeof(str), stdin);
+
+    displayConsonants(str);
+    return 0;
+}
+
+void displayConsonants(char str[]) {
+    printf("Consonants in the string: ");
+    for (int i = 0; str[i] != '\0'; i++) {
+        char ch = tolower(str[i]);
+        if ((ch >= 'a' && ch <= 'z') && !(ch=='a'||ch=='e'||ch=='i'||ch=='o'||ch=='u')) {
+            printf("%c ", str[i]);
+        }
+    }
+    printf("\n");
+}
+
+/* Example Output =>
+   Enter a string: Hello World
+   Consonants in the string: H l l W r l d
+*/
