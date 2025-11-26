@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+// Function declaration
+void sumOfSquares(int num);
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    sumOfSquares(num);   // Function call
+    return 0;
+}
+
+// Function definition
+void sumOfSquares(int num) {
+    int rem, sum = 0;
+
+    while (num != 0) {
+        rem = num % 10;          // extract digit
+        sum += rem * rem;        // add square of digit
+        num /= 10;               // reduce number
+    }
+
+    printf("Sum of squares of digits = %d\n", sum);
+}
