@@ -1,0 +1,25 @@
+//Rule: A triangle is scalene if all three sides are different.
+#include <stdio.h>
+
+void checkScalene(int a, int b, int c);
+
+int main() {
+    int a, b, c;
+    printf("Enter three sides of a triangle: ");
+    scanf("%d %d %d", &a, &b, &c);
+
+    checkScalene(a, b, c);
+    return 0;
+}
+
+void checkScalene(int a, int b, int c) {
+    if (a != b && b != c && a != c)
+        printf("The triangle is scalene.\n");
+    else
+        printf("The triangle is not scalene.\n");
+}
+
+/* Example Output =>
+   Enter three sides of a triangle: 5 6 7
+   The triangle is scalene.
+*/
