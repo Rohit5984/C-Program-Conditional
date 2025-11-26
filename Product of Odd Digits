@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+void productOfOddDigits(int num);
+
+int main() {
+    int num;
+    printf("Enter a number: ");
+    scanf("%d", &num);
+
+    productOfOddDigits(num);
+    return 0;
+}
+
+void productOfOddDigits(int num) {
+    int product = 1, rem, found = 0;
+    while (num != 0) {
+        rem = num % 10;
+        if (rem % 2 != 0) {
+            product *= rem;
+            found = 1;
+        }
+        num /= 10;
+    }
+    if (found)
+        printf("Product of odd digits = %d\n", product);
+    else
+        printf("No odd digits found.\n");
+}
